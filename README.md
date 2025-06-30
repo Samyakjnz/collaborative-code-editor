@@ -1,66 +1,50 @@
 # Collaborative Code Editor
 
-A real-time collaborative code editor that allows multiple users to edit and sync code seamlessly. Built with **React**, **Node.js**, and **Pusher**, it supports multiple programming languages and offers an intuitive interface for efficient coding sessions.
+A fully functional real-time collaborative code editor built to facilitate seamless multi-user programming sessions. This web-based platform supports simultaneous editing, room-based isolation, and multi-language syntax support. Developed using **React**, **Node.js**, and **Pusher**, it is designed for performance, scalability, and an intuitive user experience.
 
-## 🚀 Features
+## Features
 
-✅ **Real-time Collaboration** – Code synchronization using **Pusher** for seamless collaboration.  
-✅ **Multi-Language Support** – Switch between **Python, C, C++, and Java** effortlessly.  
-✅ **Live User Presence** – Displays connected users in the session.  
-✅ **Room-Based Editing** – Unique Room IDs for private coding sessions.  
-✅ **Code Sync & Execution** – Ensures that changes reflect instantly across all participants.  
-✅ **Clean UI & Notifications** – Intuitive interface with **toast notifications** for better user experience.
+- **Real-Time Collaboration**: Implements instant code synchronization using **Pusher Channels**, ensuring all participants see live changes in real time.
+- **Multiple Language Support**: Syntax highlighting and editing for **Python**, **C**, **C++**, and **Java**, with a modular design that allows for adding more languages.
+- **Live User Presence**: Displays currently connected users within a session to improve visibility and team coordination.
+- **Room-Based Editing**: Each collaboration session is uniquely identified by a Room ID, enabling isolated environments for different user groups.
+- **Code Sync Infrastructure**: Robust sync mechanism ensures all clients maintain consistent state without data conflicts.
+- **User Notifications**: Integrated toast notification system for events like user join/leave, errors, and room creation.
+- **Extensible and Modular Architecture**: Built to support future enhancements such as authentication, in-browser compilation, and version control.
 
-## 📸 Screenshots
+## Technology Stack
 
-(Add relevant screenshots here to showcase the UI and functionality)
+### Frontend
+- React.js (with Hooks and Functional Components)
+- React Router DOM
+- React Toastify
+- CSS (Flexbox and Grid for layout)
 
-## 🛠 Tech Stack
+### Backend
+- Node.js
+- Express.js
+- UUID (for Room ID generation)
 
-- **Frontend**: React.js, CSS, React Router, React Toastify
-- **Backend**: Node.js, Express.js
-- **Real-time Communication**: Pusher
-- **Others**: UUID for unique Room ID generation
+### Real-Time Communication
+- Pusher Channels (WebSocket abstraction for real-time events)
 
-## 📦 Installation & Setup
+## Getting Started
 
-1️⃣ **Clone the Repository:**  
+Follow the instructions below to run the project locally.
+
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/Samyakjnz/collaborative-code-editor.git
 cd collaborative-code-editor
-```
-
-2️⃣ **Install Dependencies:**  
-```bash
-npm install  # For both frontend and backend
-```
-
-3️⃣ **Start the Server:**  
-```bash
+# Backend setup
 cd server
-node index.js  # Runs the backend
-```
+npm install
 
-4️⃣ **Run the Frontend:**  
-```bash
-cd client
-npm start  # Runs the frontend at localhost:3000
-```
-
-## 🌍 Deployment
-
-- Hosted on **(mention if deployed on Vercel/Netlify/Heroku/etc.)**  
-- Live demo: **(Add live demo link if available)**
-
-## 📜 License
-
-This project is **open-source** and available under the **MIT License**.
-
-## 🤝 Contributing
-
-Feel free to submit issues or pull requests to improve this project!
-
-## 📩 Contact
-
-For any queries, reach out at: **your-email@example.com** or [GitHub](https://github.com/Samyakjnz).
-
+# Frontend setup
+cd ../client
+npm install
+cd server
+node index.js
+cd ../client
+npm start
